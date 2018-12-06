@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/AlbumArt"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="107dp"
+        android:src="@mipmap/default_art" />
+
+    <Button
+        android:id="@+id/Play"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/Artist"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ic_play_circle_filled_black_24dp" />
+
+    <Button
+        android:id="@+id/Pause"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/Play"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_pause_circle_filled_black_24dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/Next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/Play"
+        android:layout_toEndOf="@+id/Play"
+        android:background="@drawable/ic_fast_forward_black_24dp" />
+
+    <Button
+        android:id="@+id/Previous"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/Play"
+        android:layout_toStartOf="@+id/Play"
+        android:background="@drawable/ic_fast_rewind_black_24dp" />
+
+    <SeekBar
+        android:id="@+id/Seek"
+        android:layout_width="302dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/AlbumArt"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/StartTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Seek"
+        android:layout_below="@+id/Seek"
+        android:textColor="@color/colorText"
+        android:text="0:00" />
+
+    <TextView
+        android:id="@+id/EndTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Seek"
+        android:layout_below="@+id/Seek"
+        android:textColor="@color/colorText"
+        android:text="0:00" />
+
+    <TextView
+        android:id="@+id/SongName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/StartTimer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Taki Taki"
+        android:textColor="@color/colorText"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/Artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SongName"
+        android:layout_centerHorizontal="true"
+        android:text="Selena Gomez, Cardi B"
+        android:textColor="@color/colorText" />
+
+    <ImageView
+        android:id="@+id/AppLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        app:srcCompat="@mipmap/m" />
+
+</RelativeLayout>
